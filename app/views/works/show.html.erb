@@ -1,0 +1,28 @@
+<p>
+  <b>Category:</b>
+  <%=h @work.category_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @work.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @work.body %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @work.description %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @work.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>

@@ -44,11 +44,14 @@ staging:
   # pool: 5
   
 production:
-  # Sqlite Settings
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql
+  encoding: utf8
+  database: swiftkickpress #following rails db naming convention
+  username: swiftkick_mysql
+  password: sa1ewsa1ew
+  host: mysql.swiftkickpress.com
+  port: 3306  #not necessary since its the standard mysql port
+
 
   # Mysql Settings
   # adapter: mysql
