@@ -1,8 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :votes
-
-  map.resources :works
- 
+   
   # Restful Authentication Rewrites
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
@@ -14,13 +11,19 @@ ActionController::Routing::Routes.draw do |map|
   map.open_id_complete '/opensession', :controller => "sessions", :action => "create", :requirements => { :method => :get }
   map.open_id_create '/opencreate', :controller => "users", :action => "create", :requirements => { :method => :get }
   
+  # Content Rewrites
+  map.about '/about', :controller => "content", :action => 'about'
+  
   # Restful Authentication Resources
   map.resources :users
   map.resources :passwords
   map.resource :session
+  map.resources :copyrights
+  map.resources :votes
+  map.resources :works
   
   # Home Page
-  map.root :controller => 'sessions', :action => 'new'
+  map.root :controller => 'content', :action => 'front'
 
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'
