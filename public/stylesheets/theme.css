@@ -20,3 +20,18 @@ div.fieldWithErrors textarea{ border: 2px solid red; background-color: #ffefef;}
 
 /**** THEME ****/
 a {color: #f60;}
+
+
+/**** HERO ****/
+h1#logo a {display: block; height:201px; width:350px; text-indent: -9999px; background: transparent url(images/logo_large.png) top left no-repeat; float: left;}
+#tagline {width: 550px; padding: 50px 0 0 50px; float: left; font-size: 3em; font-weight: bold; line-height: 1em; text-transform: uppercase;}
+
+
+/**** USER_NAV ****/
+#user_nav {position: absolute; top: 10px; right: 10px;}
+#user_nav ul {list-style-type: none;}
+#user_nav ul li {float: right;}
+#user_nav ul li a {display: block; padding: 3px 10px;}
+
+/**** FOOTER ****/
+#footer {clear: both; margin-top: 40px; text-align: center;}

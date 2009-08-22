@@ -15,6 +15,8 @@ ActionController::Routing::Routes.draw do |map|
   
   # Content Rewrites
   map.about '/about', :controller => "content", :action => 'about'
+  map.admin '/admin', :controller => "content", :action => 'admin'
+  map.contact '/contact', :controller => "content", :action => 'contact'
   
   # Restful Authentication Resources
   map.resources :users

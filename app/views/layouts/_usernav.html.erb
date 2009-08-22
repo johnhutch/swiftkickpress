@@ -1,0 +1,11 @@
+<div id="user_nav">
+	<ul>
+		<% if logged_in? %>
+			<% if current_user.has_role?("admin") %><li><%= link_to "Admin", admin_path %></li><% end %>
+	        <li><%= link_to 'Log out', logout_path %></li>
+		<% else %>
+	        <li><%= link_to 'Log in', login_path %></li>
+	        <li><%= link_to 'Sign up', signup_path %></li>
+		<% end %>
+	</ul>
+</div>
