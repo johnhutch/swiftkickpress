@@ -11,11 +11,11 @@
 
 <% for work in @works %>
   <tr>
-    <td><%=h work.category_id %></td>
+    <td><%=h work.category.name %></td>
     <td><%=h work.title %></td>
     <td><%=h work.body %></td>
     <td><%=h work.description %></td>
-    <td><%=h work.user_id %></td>
+    <td><%=h work.user.name %></td>
     <td><%= link_to 'Show', work %></td>
     <td><%= link_to 'Edit', edit_work_path(work) %></td>
     <td><%= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete %></td>
