@@ -12,9 +12,9 @@ class ContentController < ApplicationController
   
   def admin
     @works = Work.find(:all, :order => "created_at DESC")
-    @users = Users.find(:all, :order => "created_at DESC")
-    @categories = Categories.find(:all, :order => "created_at DESC")
-    @copyrights = Copyrights.find(:all, :order => "created_at DESC")
+    @users = User.find(:all, :order => "created_at DESC")
+    @categories = Category.find(:all, :order => "created_at DESC")
+    @copyrights = Copyright.find(:all, :order => "created_at DESC")
   end
   
 end

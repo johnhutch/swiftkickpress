@@ -1,0 +1,44 @@
+<h2>Site Admin</h2>
+
+<h3>Works</h3>
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Author</th>
+    <th>Title</th>
+  </tr>
+
+<% for work in @works %>
+  <tr>
+    <td><%=h work.category.name %></td>
+    <td><%=h work.user.name %></td>
+    <td><%=h work.title %></td>
+    <td><%= link_to 'Show', work %></td>
+    <td><%= link_to 'Edit', edit_work_path(work) %></td>
+    <td><%= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<h3>Users</h3>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Join Date</th>
+			<th>Roles</th>
+			<th>Admin</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% for user in @users %>
+		<tr>
+			<td><%= link_to user.name, user_path(user) %></td>
+			<td><%= mail_to user.email, user.email %></td>
+			<td><%= user.created_at.strftime("%m/%d/%Y") %></td>
+			<td><% for role in user.roles %><%= role.name %>, <% end %> | <%= link_to 'edit roles', user_roles_path(user) %></td>
+			<td><%= link_to "Show", user_path(user) %> | <%= link_to "Edit", edit_user_path(user) %></td>
+		</tr>
+	<% end %>
+</table>

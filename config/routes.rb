@@ -19,7 +19,9 @@ ActionController::Routing::Routes.draw do |map|
   map.contact '/contact', :controller => "content", :action => 'contact'
   
   # Restful Authentication Resources
-  map.resources :users
+  map.resources :users do |users|
+     users.resources :roles
+   end
   map.resources :passwords
   map.resource :session
   map.resources :copyrights
