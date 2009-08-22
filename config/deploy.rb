@@ -6,7 +6,7 @@ set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost se
 
 # version control config
 set :scm, 'git'
-set :repository,  "git clone git@github.com:johnhutch/swiftkickpress.git"
+set :repository,  "git@github.com:johnhutch/swiftkickpress.git"
 set :deploy_via, :remote_cache
 set :git_enable_submodules, 1 # if you have vendored rails
 set :branch, 'master'
