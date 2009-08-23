@@ -1,6 +1,7 @@
 class ContentController < ApplicationController
   
   require_role "admin", :only => :admin
+  require_role "editor", :only => :editor
   
   def about
   end
@@ -10,6 +11,10 @@ class ContentController < ApplicationController
   end
   
   def contact
+  end
+  
+  def editor
+    @works = Work.paginate :per_page => 20, :page => params[:page], :order => "created_at DESC"
   end
   
   def admin

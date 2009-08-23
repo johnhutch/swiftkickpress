@@ -1,15 +1,29 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  category_id: 1
-  title: MyString
-  body: MyText
-  description: MyText
-  user_id: 1
+  title: Hobbies
+  body: "I like computers"
+  description: "What Hutch likes"
+  user: hutch
+  category: nonfiction
 
 two:
-  category_id: 1
-  title: MyString
-  body: MyText
-  description: MyText
-  user_id: 1
+  title: "I farted"
+  body: "it smells bad"
+  description: "what it smells like"
+  user: sammy
+  category: comics
+
+three:
+    title: "My Haiku"
+    body: "when I was a boy / masterbation was funny / now it is boring"
+    description: "a poem"
+    user: paris
+    category: poetry
+
+four: 
+    title: "Jonathan's vision"
+    body: "It is 20/20"
+    description: "It has a measurement"
+    user: sammy
+    category: fiction

@@ -1,4 +1,8 @@
 class WorksController < ApplicationController
+
+  require_role "author", :only => [:new, :edit, :update, :create]
+  require_role "admin", :only => [:destroy]
+  
   # GET /works
   # GET /works.xml
   def index
@@ -40,7 +44,7 @@ class WorksController < ApplicationController
   # POST /works
   # POST /works.xml
   def create
-    @work = Work.new(params[:work])
+    @work = current_user.works.build(params[:work])
 
     respond_to do |format|
       if @work.save

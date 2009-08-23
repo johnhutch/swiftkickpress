@@ -19,8 +19,7 @@
 	    <td><%=h work.title %></td>
 		<td><%= work.published ? "Published" : "Unpublished" %></td>
 	    <td><%= link_to 'Show', work %> | 
-	        <%= link_to 'Edit', edit_work_path(work) %> | 
-	        <%= link_to 'Destroy', work, :confirm => 'You are about to delete a work. This cannot be undone. Are you sure you want to delete this work?', :method => :delete %></td>
+	        <%= link_to 'Edit', edit_work_path(work) %></td>
 	  </tr>
 	<% end %>
 	</tbody>

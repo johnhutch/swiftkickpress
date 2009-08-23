@@ -1,7 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+fiction:
+  name: fiction
 
-two:
-  name: MyString
+nonfiction:
+  name: nonfiction
+
+comics:
+    name: comics
+    
+poetry: 
+    name: poetry

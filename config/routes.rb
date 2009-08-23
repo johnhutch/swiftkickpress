@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about '/about', :controller => "content", :action => 'about'
   map.admin '/admin', :controller => "content", :action => 'admin'
   map.contact '/contact', :controller => "content", :action => 'contact'
+  map.editor '/editor', :controller => "content", :action => 'editor'
   
   # Restful Authentication Resources
   map.resources :users do |users|
