@@ -1,0 +1,7 @@
+<div id="nav">
+	<ul>
+	<% for category in Category.find(:all) %>
+		<li><%= link_to category.name, category_path(category) %></li>
+	<% end %>
+	</ul>
+</div>
