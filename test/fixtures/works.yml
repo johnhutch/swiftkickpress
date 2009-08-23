@@ -1,20 +1,23 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: Hobbies
-  body: "I like computers"
-  description: "What Hutch likes"
-  user: hutch
-  category: nonfiction
+    id: 1
+    title: Hobbies
+    body: "I like computers"
+    description: "What Hutch likes"
+    user: hutch
+    category: nonfiction
 
 two:
-  title: "I farted"
-  body: "it smells bad"
-  description: "what it smells like"
-  user: sammy
-  category: comics
+    id: 2
+    title: "I farted"
+    body: "it smells bad"
+    description: "what it smells like"
+    user: sammy
+    category: comics
 
 three:
+    id: 3
     title: "My Haiku"
     body: "when I was a boy / masterbation was funny / now it is boring"
     description: "a poem"
@@ -22,6 +25,7 @@ three:
     category: poetry
 
 four: 
+    id: 4
     title: "Jonathan's vision"
     body: "It is 20/20"
     description: "It has a measurement"
@@ -29,6 +33,7 @@ four:
     category: fiction
     
 five:
+    id: 5
     title: "What else is new?"
     body: "Please tell me something I don't know.  That is a lie.  That is complete fiction."
     description: "About a story"

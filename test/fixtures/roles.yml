@@ -1,8 +1,12 @@
 admin:
+    id: 1
     name: admin
 editor:
+    id: 2
     name: editor
 author:
+    id: 3
     name: author
 participant:
+    id: 4
     name: participant

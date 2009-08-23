@@ -1,9 +1,66 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  user_id: 1
-  work_id: 1
+four:
+    id: 1
+    user_id: 2
+    work_id: 1
+    
+five:
+    id: 2
+    user_id: 2
+    work_id: 4
 
-two:
-  user_id: 1
-  work_id: 1
+six:
+    id: 3
+    user_id: 2
+    work_id: 5
+
+seven:
+    id: 4
+    user_id: 3
+    work_id: 2
+
+eight:
+    id: 5
+    user_id: 3
+    work_id: 5
+
+nine:
+    id: 6
+    user_id: 4
+    work_id: 1
+
+ten:
+    id: 7
+    user_id: 4
+    work_id: 2
+
+eleven:
+    id: 8
+    user_id: 4
+    work_id: 3
+
+twelve:
+    id: 9
+    user_id: 4
+    work_id: 5
+
+thirteen:
+    id: 10
+    user_id: 5
+    work_id: 2
+
+fourteen:
+    id: 11
+    user_id: 5
+    work_id: 3
+
+fifteen:
+    id: 12
+    user_id: 5
+    work_id: 4
+
+sixteen:
+    id: 13
+    user_id: 5
+    work_id: 5

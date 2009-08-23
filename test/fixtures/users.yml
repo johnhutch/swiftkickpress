@@ -1,13 +1,15 @@
 admin:
-  login: admin
-  email: admin@example.com
-  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
-  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
-  # activation_code: adminscode # only if you're activating new signups
-  created_at: <%= 1.days.ago.to_s :db %>
-  roles: admin
+    id: 1
+    login: admin
+    email: admin@example.com
+    salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+    crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+    # activation_code: adminscode # only if you're activating new signups
+    created_at: <%= 1.days.ago.to_s :db %>
+    roles: admin
   
 hutch:
+    id: 2
     login: hutch
     email: johnhutch@gmail.com
     salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
@@ -17,6 +19,7 @@ hutch:
     roles: author, participant
     
 sammy:
+    id: 3
     login: arbitrarynoun
     email: arbitrarynoun@gmail.com
     salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
@@ -27,6 +30,7 @@ sammy:
     
     
 paris:
+    id: 4
     login: paris
     email: jonathan.edward.hall@gmail.com
     salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
@@ -36,6 +40,7 @@ paris:
     roles: author, participant
 
 somebody:
+    id: 5
     login: somebody
     email: somebody@gmail.com
     salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
