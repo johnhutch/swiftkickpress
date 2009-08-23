@@ -1,17 +1,58 @@
 class UsersController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :create
+  before_filter :login_required, :only => [:edit, :update]
+  
+  def index
+    @users = User.find(:all, :order => "created_at ASC")
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @players }
+    end
+  end
+  
+  def show 
+    @user = User.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @user }
+    end
+  end
   
   def new
     @user = User.new
   end
- 
+  
+  def edit
+    if current_user.has_role?("admin")
+      @user = User.find(params[:id])
+    else
+      @user = current_user
+    end
+  end
+  
+  def update
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        flash[:notice] = "#{@user.name} was successfully updated."
+        format.html { redirect_to(@user) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
   def create
     logout_keeping_session!
     if using_open_id?
       authenticate_with_open_id(params[:openid_url], :return_to => open_id_create_url, 
         :required => [:nickname, :email]) do |result, identity_url, registration|
         if result.successful?
-          create_new_user(:identity_url => identity_url, :login => registration['nickname'], :email => registration['email'])
+          create_new_user(:identity_url => identity_url, :login => registration['nickname'], :name => registration['nickname'], :email => registration['email'])
         else
           failed_creation(result.message || "Sorry, something went wrong")
         end

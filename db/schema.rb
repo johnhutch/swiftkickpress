@@ -9,17 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090822164306) do
+ActiveRecord::Schema.define(:version => 20090823005011) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "copyrights", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -103,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20090822164306) do
     t.datetime "updated_at"
     t.text     "pullquote"
     t.integer  "copyright_id"
+    t.boolean  "published",    :default => false
   end
 
 end

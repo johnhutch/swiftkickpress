@@ -1,0 +1,15 @@
+<h2><%= @user.name %>'s Profile</h2>
+
+<h3>Bio:</h3>
+<%= textilize(@user.bio) %>
+
+<h3>Works to date:</h3>
+<% if @user.works.blank? %>
+	<p><%= @user.name %> has not submitted any works.</p>
+<% else %>
+	<ul>
+	<% for work in @user.works %>
+		<li><%= link_to work.title, work_path(work) %></li>
+	<% end %>
+	</ul>
+<% end %>

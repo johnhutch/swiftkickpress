@@ -2,22 +2,28 @@
 
 <h3>Works</h3>
 <table>
-  <tr>
-    <th>Category</th>
-    <th>Author</th>
-    <th>Title</th>
-  </tr>
-
-<% for work in @works %>
-  <tr>
-    <td><%=h work.category.name %></td>
-    <td><%=h work.user.name %></td>
-    <td><%=h work.title %></td>
-    <td><%= link_to 'Show', work %></td>
-    <td><%= link_to 'Edit', edit_work_path(work) %></td>
-    <td><%= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+	<thead>
+	  <tr>
+	    <th>Category</th>
+	    <th>Author</th>
+	    <th>Title</th>
+		<th>Status</th>
+		<th>Admin</th>
+	  </tr>
+	</thead>
+	<tbody>
+	<% for work in @works %>
+	  <tr>
+	    <td><%=h work.category.name %></td>
+	    <td><%=h work.user.name %></td>
+	    <td><%=h work.title %></td>
+		<td><%= work.published ? "Published" : "Unpublished" %></td>
+	    <td><%= link_to 'Show', work %> | 
+	        <%= link_to 'Edit', edit_work_path(work) %> | 
+	        <%= link_to 'Destroy', work, :confirm => 'You are about to delete a work. This cannot be undone. Are you sure you want to delete this work?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</tbody>
 </table>
 
 <h3>Users</h3>
@@ -42,3 +48,21 @@
 		</tr>
 	<% end %>
 </table>
+
+<h3>Content Categories</h3>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Admin</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% for category in @categories %>
+		<tr>
+			<td><%= link_to category.name, category_path(category) %></td>
+			<td><%= link_to "Edit", edit_category_path(category) %></td>
+		</tr>
+	<% end %>
+</table>
+<p><%= link_to "Create a new category", new_category_path %></p>
