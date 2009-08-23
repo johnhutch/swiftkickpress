@@ -1,13 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 fiction:
-  name: fiction
+    id: 1
+    name: fiction
 
 nonfiction:
-  name: nonfiction
+    id: 2
+    name: nonfiction
 
 comics:
+    id: 3
     name: comics
     
-poetry: 
+poetry:
+    id: 4
     name: poetry
