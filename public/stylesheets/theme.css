@@ -23,6 +23,8 @@ a {color: #f60;}
 
 
 /**** HERO ****/
+#hero {background-color: #efefef;}
+h1#logo {margin: 0;}
 h1#logo a {display: block; height:201px; width:350px; text-indent: -9999px; background: transparent url(images/logo_large.png) top left no-repeat; float: left;}
 #tagline {width: 550px; padding: 50px 0 0 50px; float: left; font-size: 3em; font-weight: bold; line-height: 1em; text-transform: uppercase;}
 
@@ -33,7 +35,48 @@ h1#logo a {display: block; height:201px; width:350px; text-indent: -9999px; back
 #user_nav ul li {float: right;}
 #user_nav ul li a {display: block; padding: 3px 10px;}
 
+
+/**** MAIN_CONTENT ****/
+#main_content {background-color: #ccc;}
+
+
+/**** NAV ****/
+#nav { background-color: #ccc; height: 50px; width: 590px; float: left;}
+#nav ul {list-style-type: none; margin: 0;}
+#nav ul li { float:left;}
+#nav ul li a {display: block; padding:5px 60px 5px 0;  font-size: 2em; text-decoration: none;}
+
+
+/**** NEWS ****/
+#news {width: 360px; background-color: #bbb; float: right; height: 450px;}
+
+
+/**** CONTENT ****/
+#content {background-color: #eee;}
+
+/**** FEATURED_WORKS ****/
+#featured_works {background-color: #ddd; width: 590px; float: left; height: 300px;}
+
+
+/**** FEATURED_AUTHORS ****/
+#featured_authors {background-color: #eee; width: 590px; float: left; height: 100px;}
+
+
+/**** SUB_CONTENT ****/
+#sub_content {color: white; background-color: #333;}
+#sub_content h2 {color: #f60;}
+
+
+/**** WORK_LIST ****/
+#works_list {width: 590px; padding: 0; margin: 0; float: left; height: 300px;}
+
+
+/**** GOOGLE_AD ****/
+#google_ad {width: 360px; background-color: #444; float: left; height: 250px;}
+
+
 /**** UTILITY_NAV ****/
+#utility_nav {clear: left;}
 #utility_nav ul {list-style-type: none;}
 #utility_nav ul li {float: left;}
 #utility_nav ul li a {display: block; padding: 3px 20px 3px 0;}

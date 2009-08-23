@@ -5,18 +5,49 @@
 	<%= render :partial => 'layouts/head' %>
 
 	<body>
-		<div id="hero" class="container">
+		<div id="hero">
+		  <div class="container">
 			<h1 id="logo"><a href="/">Swiftkick Press</a></h1>
 			<div id="tagline">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</div>
+		  </div>
 		</div>
-		
-		<%= render :partial => 'nav' %>
-		
-		<div id="featured">
+	
+		<div id="main_content">
+			<div class="container">
+				<%= render :partial => 'layouts/nav' %>
+	
+				<div id="news">
+					News goes here
+				</div>
 			
+				<div id="featured_works">
+					Featured works by category
+				</div>
+			
+				<div id="featured_authors">
+					Featured authors
+				</div>
+	
+				<%= yield :layout %>
+	
+			</div>
 		</div>
 		
-		<%= yield :layout %>
+		<div id="sub_content">
+			<div class="container">
+				<h2>Newly added works</h2>
+				<ul id="works_list">
+					<li>blah</li>
+					<li>blah</li>
+					<li>blah</li>
+					<li>blah</li>
+				</ul>
+				
+				<div id="google_ad">
+					Google Ad!
+				</div>
+			</div>
+		</div>
 		
 		<%= render :partial => 'layouts/utility_nav' %>
 		<%= render :partial => 'layouts/footer' %>
