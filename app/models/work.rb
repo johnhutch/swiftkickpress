@@ -13,7 +13,7 @@ class Work < ActiveRecord::Base
       "USING (user_id)" +
       "WHERE v.work_id=" + self.id.to_s
     
-    Work.count_by_sql(sql)
+    Work.find_by_sql(sql)
   end
 
 end
