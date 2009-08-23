@@ -1,6 +1,8 @@
 admin:
-  name: admin
+    name: admin
 editor:
-  name: editor
+    name: editor
+author:
+    name: author
 participant:
     name: participant

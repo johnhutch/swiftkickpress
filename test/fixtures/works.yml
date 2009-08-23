@@ -27,3 +27,10 @@ four:
     description: "It has a measurement"
     user: sammy
     category: fiction
+    
+five:
+    title: "What else is new?"
+    body: "Please tell me something I don't know.  That is a lie.  That is complete fiction."
+    description: "About a story"
+    user: paris
+    category: fiction
