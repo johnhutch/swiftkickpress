@@ -1,13 +1,16 @@
 <div id="user_nav">
-	<ul>
-		<% if logged_in? %>
+	<% if logged_in? %>
+		<ul>
 			<% if current_user.has_role?("admin") %><li><%= link_to "Admin", admin_path %></li><% end %>
 			<% if current_user.has_role?("editor") %><li><%= link_to "Editor panel", editor_path %></li><% end %>
 			<% if current_user.has_role?("author") %><li><%= link_to "Post something!", new_work_path %></li><% end %>
 	        <li><%= link_to 'Log out', logout_path %></li>
-		<% else %>
+		</ul>
+	<% else %>
+		<p>Want to participate?</p>
+		<ul>
 	        <li><%= link_to 'Log in', login_path %></li>
 	        <li><%= link_to 'Sign up', signup_path %></li>
-		<% end %>
-	</ul>
+		</ul>
+	<% end %>
 </div>

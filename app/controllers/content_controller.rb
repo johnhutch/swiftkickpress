@@ -7,7 +7,7 @@ class ContentController < ApplicationController
   end
   
   def front
-    render :layout => "front"
+    #render :layout => "front"
   end
   
   def contact

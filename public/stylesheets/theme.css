@@ -19,32 +19,39 @@ div.fieldWithErrors input, div.fieldWithErrors select,
 div.fieldWithErrors textarea{ border: 2px solid red; background-color: #ffefef;}
 
 /**** THEME ****/
+body {font-family: Georgia, Times New Roman, Times, Serif;}
 a {color: #f60;}
 
 
 /**** HERO ****/
-#hero {background-color: #efefef;}
-h1#logo {margin: 0;}
-h1#logo a {display: block; height:201px; width:350px; text-indent: -9999px; background: transparent url(images/logo_large.png) top left no-repeat; float: left;}
-#tagline {width: 550px; padding: 50px 0 0 50px; float: left; font-size: 3em; font-weight: bold; line-height: 1em; text-transform: uppercase;}
+#header {position: relative; background: transparent url(images/header_bg.png) top left repeat-x; margin-top: 60px; height: 124px; z-index: 10;}
+#header .container {position: relative; height: 100%; background: transparent url(images/curly_bracket.png) 42% 5px no-repeat;}
+h1#logo {margin: 0; position: absolute; top: -58px;}
+h1#logo a {display: block; height:209px; width:356px; text-indent: -9999px; background: transparent url(images/logo_large.png) top left no-repeat; float: left;}
+h2#tagline {width: 500px; padding: 15px 0 0 450px; font-size: 1.1em; font-style: italic; text-align: center;}
+#header hr { width: 350px; margin: 5px 0; margin-left: 520px; background-color: #bbb;}
+
+/**** NAV ****/
+ul#nav {list-style-type: none; padding: 0; margin: 0 0 0 455px;}
+ul#nav li { float:left; color: #f60;}
+ul#nav li a { padding: 0 25px; color: #444; font-size: 2em; text-decoration: none; background: transparent url(images/orange_bullet.png) 50% right no-repeat;}
+ul#nav li a:hover {color: #f60;}
+ul#nav li a.first {padding-left: 0;}
+ul#nav li a.last {padding-right: 0; background-image: none;}
 
 
 /**** USER_NAV ****/
-#user_nav {position: absolute; top: 10px; right: 10px;}
-#user_nav ul {list-style-type: none;}
+#user_nav {position: absolute; font-size: 1.1em; background-color: #efeeee; border: 1px solid #ccc; border-bottom-width: 0; top: -30px; right: 0px; width: 360px; z-index: 5;}
+#user_nav p {float: left; margin: 8px 0 0 8px; font-style: italic;}
+#user_nav ul {list-style-type: none; text-align: right;}
 #user_nav ul li {float: right;}
-#user_nav ul li a {display: block; padding: 3px 10px;}
+#user_nav ul li a {display: block; padding: 8px 10px 2px 10px; color: #444; text-decoration: none;}
+#user_nav ul li a:hover {text-decoration: underline;}
 
 
 /**** MAIN_CONTENT ****/
 #main_content {background-color: #ccc;}
 
-
-/**** NAV ****/
-#nav { background-color: #ccc; height: 50px; width: 590px; float: left;}
-#nav ul {list-style-type: none; margin: 0;}
-#nav ul li { float:left;}
-#nav ul li a {display: block; padding:5px 60px 5px 0;  font-size: 2em; text-decoration: none;}
 
 
 /**** NEWS ****/
