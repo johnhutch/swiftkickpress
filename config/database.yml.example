@@ -44,19 +44,10 @@ staging:
   # pool: 5
   
 production:
+  # Mysql Settings
   adapter: mysql
   encoding: utf8
-  database: swiftkickpress #following rails db naming convention
-  username: swiftkick_mysql
-  password: sa1ewsa1ew
-  host: mysql.swiftkickpress.com
-  port: 3306  #not necessary since its the standard mysql port
-
-
-  # Mysql Settings
-  # adapter: mysql
-  # encoding: utf8
-  # database: bort_production
-  # username: root
-  # password:
-  # pool: 5
+  database: bort_production
+  username: root
+  password:
+  pool: 5
